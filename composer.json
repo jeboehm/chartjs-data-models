@@ -1,0 +1,19 @@
+{
+  "name": "jeboehm/chartjs-data-models",
+  "description": "PHP models to prepare data objects for Chart.js easily",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4",
+    "ext-json": "*"
+  },
+  "suggest": {
+    "symfony/serializer": "To output serialized data to Chart.js",
+    "jms-serializer/serializer": "To output serialized data to Chart.js"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jeboehm\\ChartJs\\Model\\": "src/"
+    }
+  }
+}
