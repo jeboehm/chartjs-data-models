@@ -15,6 +15,9 @@ class Coordinate implements DataTypeInterface
         $this->y = $y;
     }
 
+    /**
+     * @return array<string,float>
+     */
     public function jsonSerialize(): array
     {
         return [

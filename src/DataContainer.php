@@ -8,9 +8,15 @@ use JsonSerializable;
 
 class DataContainer implements JsonSerializable
 {
+    /** @var array<DataSet> */
     private array $datasets = [];
+
+    /** @var array<string> */
     private array $labels = [];
 
+    /**
+     * @return array<DataSet>
+     */
     public function getDatasets(): array
     {
         return $this->datasets;
@@ -21,6 +27,9 @@ class DataContainer implements JsonSerializable
         $this->datasets = $datasets;
     }
 
+    /**
+     * @return array<string>
+     */
     public function getLabels(): array
     {
         return $this->labels;
@@ -31,6 +40,9 @@ class DataContainer implements JsonSerializable
         $this->labels = $labels;
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function jsonSerialize(): array
     {
         return [

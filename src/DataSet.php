@@ -9,7 +9,10 @@ use JsonSerializable;
 
 class DataSet implements JsonSerializable
 {
+    /** @var array<DataTypeInterface> */
     private array $data = [];
+
+    /** @var array<string,mixed> */
     private array $properties = [];
 
     public function setLabel(string $label): void
@@ -17,6 +20,10 @@ class DataSet implements JsonSerializable
         $this->properties['label'] = $label;
     }
 
+    /**
+     * @param string $name
+     * @param mixed $value
+     */
     public function addProperty(string $name, $value): void
     {
         $this->properties[$name] = $value;
@@ -27,6 +34,9 @@ class DataSet implements JsonSerializable
         $this->data = $data;
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function jsonSerialize(): array
     {
         return array_merge(
