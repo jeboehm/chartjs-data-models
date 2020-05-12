@@ -13,6 +13,11 @@ class Number implements DataTypeInterface
         $this->value = $value;
     }
 
+    public function getValue(): float
+    {
+        return $this->value;
+    }
+
     public static function fromInteger(int $value): self
     {
         return new self((float)$value);

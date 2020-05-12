@@ -34,6 +34,11 @@ class DataSet implements JsonSerializable
         $this->data = $data;
     }
 
+    public function addData(DataTypeInterface $data): void
+    {
+        $this->data[] = $data;
+    }
+
     /**
      * @return array<mixed>
      */

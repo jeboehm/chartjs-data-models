@@ -40,6 +40,11 @@ class DataContainer implements JsonSerializable
         $this->labels = $labels;
     }
 
+    public function addLabel(string $label): void
+    {
+        $this->labels[] = $label;
+    }
+
     /**
      * @return array<mixed>
      */
