@@ -17,7 +17,7 @@
     }
   },
   "require-dev": {
-    "phpstan/phpstan": "0.12.83"
+    "phpstan/phpstan": "1.10.66"
   },
   "scripts": {
     "phpstan": "phpstan analyse -l 8 src/"
